@@ -70,7 +70,7 @@ body {
 }
 
 .leaflet-popup-content-wrapper {
-    width: 600px;
+    min-width: 400px;
 }
 
 #popup {

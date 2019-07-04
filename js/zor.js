@@ -1,4 +1,4 @@
-let geojson = {
+let zors = {
     "type": "FeatureCollection",
     "features": [{
         "type": "Feature",
@@ -39,10 +39,10 @@ let geojson = {
     }]
 };
 
-L.geoJson(geojson, {
-    onEachFeature: onEachFeature
+L.geoJson(zors, {
+    onEachFeature: onZorFeature
 }).addTo(map);
 
-function onEachFeature(feature, layer) {
+function onZorFeature(feature, layer) {
         layer.setStyle(Object.assign({fillOpacity: 0.7}, feature.properties));
 }

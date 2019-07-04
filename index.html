@@ -22,13 +22,13 @@
 <body>
 <!--    <div id="login">Log in section</div>-->
     <div id="criteria-list" class="tools">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-beer fa-lg"></i> <!-- beer -->
+        <button class="btn btn-primary dropdown-toggle" id="displayed-layer" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            ...
         </button>
         <div class="dropdown-menu" aria-labelledby="list-criteria">
-            <a class="dropdown-item" href=""><i class="fas fa-beer fa-lg"></i></a> <!-- beer -->
-            <a class="dropdown-item" href=""><i class="fas fa-hotel fa-lg"></i></a> <!-- hotel -->
-            <a class="dropdown-item" href=""><i class="fas fa-theater-masks fa-lg"></i></a> <!-- theater -->
+            <span class="dropdown-item" id="bars-button"><i class="fas fa-beer fa-lg"></i></span> <!-- beer -->
+            <span class="dropdown-item" id="museums-button"><i class="fas fa-hotel fa-lg"></i></span> <!-- hotel -->
+            <span class="dropdown-item" id="theaters-button"><i class="fas fa-theater-masks fa-lg"></i></span> <!-- theater -->
         </div>
     </div>
     <input type="text" id="search" class="form-control tools" placeholder="Adresse, lieu...">
@@ -51,5 +51,6 @@
     <script src="js/map-icons.js"></script>
     <script src="js/map.js"></script>
     <script src="js/zor.js"></script>
+    <script src="js/bars.js"></script>
 </body>
 </html>

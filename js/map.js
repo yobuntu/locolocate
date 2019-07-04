@@ -5,10 +5,18 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_M
 }).addTo(map);
 
 // Add default points on Dublin
+let popi1 = {
+    name: "23-16 O'Connell Street Upper",
+    lat: 53.351318,
+    lng: -6.260779,
+    icons: ['Magasins', 'restos', 'sculptures']
+};
 
-let templebar = L.marker([53.345099, -6.267512]);
-templebar.bindPopup('<span>yo</span>');
-map.addLayer(templebar);
-let hughesbar = L.marker([53.347057, -6.272443]);
-hughesbar.bindPopup('<span>yo</span>');
-map.addLayer(hughesbar);
+L.marker([popi1.lat, popi1.lng])
+    .bindPopup(createPopup(popi1))
+    .addTo(map);
+
+
+function createPopup(popi) {
+    return `<span>${popi.name}</span>`
+}

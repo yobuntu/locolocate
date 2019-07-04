@@ -9,13 +9,43 @@ let popi1 = {
     name: "23-16 O'Connell Street Upper",
     lat: 53.351318,
     lng: -6.260779,
-    icons: ['Magasins', 'restos', 'sculptures']
+    icon: shoppingIcon,
 };
 
-L.marker([popi1.lat, popi1.lng])
-    .bindPopup(createPopup(popi1))
-    .addTo(map);
+let popi2 = {
+    name: 'Grafton Street, Dublin, Irlande',
+    lat: 53.342307,
+    lng: -6.259752,
+    icon: monumentIcon,
+};
 
+let popi3 = {
+    name: 'Temple Bar',
+    lat: 53.344957,
+    lng: -6.267473,
+    icon: barIcon,
+};
+
+let popi4 = {
+    name: 'National Museum of Ireland - Archaeology',
+    lat: 53.340259,
+    lng: -6.254917,
+    icon: museumIcon,
+};
+
+let popi5 = {
+    name: 'Christ Church Cathedral',
+    lat: 53.343719,
+    lng: -6.271034,
+    icon: monumentIcon,
+};
+
+[popi1, popi2, popi3, popi4, popi5].forEach(function (popi) {
+    L.marker([popi.lat, popi.lng], {icon: popi.icon})
+        .bindPopup(createPopup(popi))
+        .addTo(map);
+
+});
 
 function createPopup(popi) {
     return `<span>${popi.name}</span>`

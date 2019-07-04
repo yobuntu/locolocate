@@ -39,12 +39,17 @@ body {
 }
 
 .dropdown-menu {
-    min-width: 40px!important;
+    min-width: 50px!important;
 }
 
 #search {
     left: 120px;
     width: 300px;
+    padding-left: 40px;
+    background-image: url('../fontawesome/svgs/solid/search-location.svg');
+    background-position: 7px 7px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
 }
 
 #list-modes {

@@ -43,10 +43,10 @@ let popi5 = {
 
 [popi1, popi2, popi3, popi4, popi5].forEach(function (popi) {
     L.marker([popi.lat, popi.lng], {icon: popi.icon})
-        .bindPopup(createPopup(popi))
+        .bindPopup(createPopiPopup(popi, 'BC'))
         .addTo(map);
 });
 
-function createPopup(popi) {
+function createPopiPopup(popi, activeMode, immediate) {
     return `<div id="popup"><h4>${popi.name}</h4> <span id="popup-icon"><i class="fas fa-beer fa-3x"></i><i class="fas fa-trash fa-3x"></i></span><div>${popi.address}</div></div>`
 }

@@ -418,11 +418,11 @@ let barsDisplayed = false;
 let poiPopup = "<div class='poi-popup'>" +
     "<h4>The Random Bar</h4>" +
     "<div class=\"btn-group poi-list-modes\" role=\"group\" aria-label=\"Basic example\">" +
-    "        <button type=\"button\" class=\"btn btn-info\"><i class=\"fas fa-walking fa-lg\"></i></button>" +
-    "        <button type=\"button\" class=\"btn btn-info\"><i class=\"fas fa-biking fa-lg\"></i></button>" +
-    "        <button type=\"button\" class=\"btn btn-info\"><i class=\"fas fa-car fa-lg\"></i></button>" +
-    "        <button type=\"button\" class=\"btn btn-info\"><i class=\"fas fa-subway fa-lg\"></i></button>" +
-    "        <button type=\"button\" class=\"btn btn-info\"><i class=\"fas fa-code-branch fa-lg\"></i></button>" +
+    "        <button type=\"button\" class=\"btn btn-info\" onclick='switchToPopi()'><i class=\"fas fa-walking fa-lg\"></i></button>" +
+    "        <button type=\"button\" class=\"btn btn-info\" onclick='switchToPopi()'><i class=\"fas fa-biking fa-lg\"></i></button>" +
+    "        <button type=\"button\" class=\"btn btn-info\" onclick='switchToPopi()'><i class=\"fas fa-car fa-lg\"></i></button>" +
+    "        <button type=\"button\" class=\"btn btn-info\" onclick='switchToPopi()'><i class=\"fas fa-subway fa-lg\"></i></button>" +
+    "        <button type=\"button\" class=\"btn btn-info\" onclick='switchToPopi()'><i class=\"fas fa-code-branch fa-lg\"></i></button>" +
     "    </div>" +
     "</div>";
 

@@ -6,7 +6,8 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_M
 
 // Add default points on Dublin
 let popi1 = {
-    name: "23-16 O'Connell Street Upper",
+    name: "O'Connell Street Upper",
+    address: "23-16 O'Connell Street Upper",
     lat: 53.351318,
     lng: -6.260779,
     icon: shoppingIcon,
@@ -48,5 +49,5 @@ let popi5 = {
 });
 
 function createPopup(popi) {
-    return `<span>${popi.name}</span>`
+    return `<div id="popup"><h4>${popi.name}</h4> <span id="popup-icon"><i class="fas fa-beer fa-3x"></i><i class="fas fa-trash fa-3x"></i></span><div>${popi.address}</div></div>`
 }

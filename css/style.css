@@ -55,3 +55,17 @@ body {
 #list-modes {
     left: 500px;
 }
+
+.leaflet-popup-content-wrapper {
+    width: 600px;
+}
+
+#popup {
+width: 800px;
+}
+
+#popup h4 {
+    display: inline;
+}
+
+# popup

@@ -30,5 +30,5 @@ let monumentIcon =  L.AwesomeMarkers.icon({
     markerColor: 'blue',
     prefix: 'fa',
     extraClasses: 'fas',
-    icon: 'home' ,
+    icon: 'camera-retro' ,
 });

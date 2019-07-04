@@ -400,16 +400,15 @@ let bars = {
 ]
 };
 
-let displayedLayer = document.getElementById('displayed-layer');
 let bars_button = document.getElementById('bars-button');
 bars_button.addEventListener('click', (e) => {
     if (!barsDisplayed) {
         barsLayer.addTo(map);
-        displayedLayer.innerHTML = '<i class="fas fa-beer fa-lg"></i>'
+        bars_button.classList.add('active');
     }
     else {
         map.removeLayer(barsLayer);
-        displayedLayer.innerHTML = '...';
+        bars_button.classList.remove('active');
     }
     barsDisplayed = !barsDisplayed;
 });
@@ -442,5 +441,3 @@ let barsLayer = L.geoJson(bars, {
 function onBarsFeatures(feature, layer) {
     layer.bindPopup(poiPopup);
 }
-
-bars_button.click();

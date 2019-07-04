@@ -32,14 +32,11 @@ body {
 }
 
 #criteria-list {
-    left: 20px;
+    left: 30px;
 }
-
-#criteria-list a {
-}
-
-.dropdown-menu {
-    min-width: 50px!important;
+#criteria-list button {
+    padding: 10px 10px;
+    box-shadow: 0 -3px 4px -4px #0a0a0a inset;
 }
 
 #search {
@@ -50,10 +47,6 @@ body {
     background-position: 7px 7px;
     background-size: 20px 20px;
     background-repeat: no-repeat;
-}
-
-#list-modes {
-    left: 500px;
 }
 
 #log-in {

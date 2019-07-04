@@ -43,10 +43,20 @@ let popi5 = {
 
 [popi1, popi2, popi3, popi4, popi5].forEach(function (popi) {
     L.marker([popi.lat, popi.lng], {icon: popi.icon})
-        .bindPopup(createPopiPopup(popi, 'BC'))
+        .bindPopup(createPopiPopup(popi))
         .addTo(map);
 });
 
-function createPopiPopup(popi, activeMode, immediate) {
-    return `<div id="popup"><h4>${popi.name}</h4> <span id="popup-icon"><i class="fas fa-beer fa-3x"></i><i class="fas fa-trash fa-3x"></i></span><div>${popi.address}</div></div>`
+function createPopiPopup(popi) {
+    return `<div class='poi-popup'>
+                <h4>${popi.name}</h4>
+                <span>${popi.address}</span>
+                <div class="btn-group poi-list-modes" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-info active" onclick='switchToPopi()'><i class="fas fa-walking fa-lg"></i></button>
+                        <button type="button" class="btn btn-info" onclick='switchToPopi()'><i class="fas fa-biking fa-lg"></i></button>
+                        <button type="button" class="btn btn-info" onclick='switchToPopi()'><i class="fas fa-car fa-lg"></i></button>
+                        <button type="button" class="btn btn-info" onclick='switchToPopi()'><i class="fas fa-subway fa-lg"></i></button>
+                        <button type="button" class="btn btn-info" onclick='switchToPopi()'><i class="fas fa-code-branch fa-lg"></i></button>
+                </div>
+        </div>`;
 }

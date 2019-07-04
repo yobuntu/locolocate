@@ -20,25 +20,14 @@
     <link rel="stylesheet" href="awesome-markers/leaflet.awesome-markers.css">
 </head>
 <body>
-<!--    <div id="login">Log in section</div>-->
-    <div id="criteria-list" class="tools">
-        <button class="btn btn-primary dropdown-toggle" id="displayed-layer" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            ...
-        </button>
-        <div class="dropdown-menu" aria-labelledby="list-criteria">
-            <span class="dropdown-item" id="bars-button"><i class="fas fa-beer fa-lg"></i></span> <!-- beer -->
-            <span class="dropdown-item" id="museums-button"><i class="fas fa-hotel fa-lg"></i></span> <!-- hotel -->
-            <span class="dropdown-item" id="theaters-button"><i class="fas fa-theater-masks fa-lg"></i></span> <!-- theater -->
-        </div>
+    <div class="btn-group-vertical tools" id="criteria-list" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-info" id="bars-button"><i class="fas fa-beer fa-lg"></i></button>
+        <button type="button" class="btn btn-info"><i class="fas fa-hotel fa-lg"></i></button>
+        <button type="button" class="btn btn-info"><i class="fas fa-theater-masks fa-lg"></i></button>
+        <button type="button" class="btn btn-info"><i class="fas fa-shopping-cart fa-lg"></i></button>
+        <button type="button" class="btn btn-info"><i class="fas fa-building fa-lg"></i></button>
     </div>
     <input type="text" id="search" class="form-control tools" placeholder="Adresse, lieu...">
-    <div class="btn-group tools" id="list-modes" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-info"><i class="fas fa-walking fa-lg"></i></button>
-        <button type="button" class="btn btn-info active"><i class="fas fa-biking fa-lg"></i></button>
-        <button type="button" class="btn btn-info"><i class="fas fa-car fa-lg"></i></button>
-        <button type="button" class="btn btn-info"><i class="fas fa-subway fa-lg"></i></button>
-        <button type="button" class="btn btn-info"><i class="fas fa-code-branch fa-lg"></i></button>
-    </div>
 
     <button type="button" class="btn btn-secondary tools" id="share"><i class="fas fa-share-alt fa-lg"></i></button>
     <button type="button" class="btn btn-warning tools" id="log-in">Sign up / Log in</button>

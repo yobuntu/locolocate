@@ -69,14 +69,16 @@ body {
     right: 200px;
 }
 
-.leaflet-popup-content-wrapper {
-    min-width: 400px;
+.leaflet-popup-content {
+    margin: 0;
 }
 
-#popup {
-width: 800px;
-}
-
-#popup h4 {
-    display: inline;
+.poi-popup {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
 }

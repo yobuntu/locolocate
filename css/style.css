@@ -15,7 +15,31 @@ body {
 }
 
 #map-id {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     height: 100vh;
     width: auto;
     z-index: 0;
+}
+
+.tools  {
+    position: fixed;
+    z-index: 10;
+    top: 20px;
+}
+
+#criteria-list {
+    left: 20px;
+}
+
+#search {
+    left: 120px;
+    width: 300px;
+}
+
+#list-modes {
+    left: 500px;
 }

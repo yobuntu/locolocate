@@ -55,3 +55,16 @@ body {
 #list-modes {
     left: 500px;
 }
+
+#log-in {
+    right: 30px;
+    padding-left: 40px;
+    background-image: url('../fontawesome/svgs/solid/sign-in-alt.svg');
+    background-position: 7px 7px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+#share {
+    right: 200px;
+}

@@ -1,4 +1,4 @@
-let map = L.map('map-id', {zoomControl: false}).setView([53.351291, -6.267428], 12);
+let map = L.map('map-id', {zoomControl: false}).setView([53.351291, -6.267428], 14);
 
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
@@ -44,7 +44,6 @@ let popi5 = {
     L.marker([popi.lat, popi.lng], {icon: popi.icon})
         .bindPopup(createPopup(popi))
         .addTo(map);
-
 });
 
 function createPopup(popi) {

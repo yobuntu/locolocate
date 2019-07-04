@@ -5,7 +5,7 @@
     <title>LocoLocate</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link href="./assets/locoloca.png" rel="icon">
+    <link href="./assets/locolocat.png" rel="icon">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
           integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
           crossorigin=""/>
@@ -16,6 +16,7 @@
     <link href="./fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
     <script defer src="./fontawesome/js/fontawesome.min.js"></script>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+    <script src="js/wellknown.js"></script>
     <link rel="stylesheet" href="awesome-markers/leaflet.awesome-markers.css">
 </head>
 <body>
@@ -38,6 +39,9 @@
         <button type="button" class="btn btn-info"><i class="fas fa-subway fa-lg"></i></button>
         <button type="button" class="btn btn-info"><i class="fas fa-code-branch fa-lg"></i></button>
     </div>
+
+    <button type="button" class="btn btn-secondary tools" id="share"><i class="fas fa-share-alt fa-lg"></i></button>
+    <button type="button" class="btn btn-warning tools" id="log-in">Sign up / Log in</button>
     <div id="map-id"></div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -46,5 +50,6 @@
     <script src="awesome-markers/leaflet.awesome-markers.js"></script>
     <script src="js/map-icons.js"></script>
     <script src="js/map.js"></script>
+    <script src="js/zor.js"></script>
 </body>
 </html>

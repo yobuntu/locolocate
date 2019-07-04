@@ -35,6 +35,13 @@ body {
     left: 20px;
 }
 
+#criteria-list a {
+}
+
+.dropdown-menu {
+    min-width: 40px!important;
+}
+
 #search {
     left: 120px;
     width: 300px;

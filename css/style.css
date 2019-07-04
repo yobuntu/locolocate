@@ -68,3 +68,15 @@ body {
 #share {
     right: 200px;
 }
+
+.leaflet-popup-content-wrapper {
+    width: 600px;
+}
+
+#popup {
+width: 800px;
+}
+
+#popup h4 {
+    display: inline;
+}

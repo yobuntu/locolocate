@@ -1,7 +1,8 @@
 let map = L.map('map-id', {zoomControl: false}).setView([53.351291, -6.267428], 14);
 
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+    maxZoom: 20,
+    attribution: '&copy; Openstreetmap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
 // Add default points on Dublin
@@ -51,13 +52,14 @@ let popi5 = {
         .addTo(map);
 });
 
-function createPopiPopup(popi) {
+function createPopiPopup(popi, temp) {
     let faIcon = 'fa-' + popi.icon.options.icon;
     return `<div class='popi-popup'>
                 <h5>${popi.name}</h5>
                 <p>${popi.address}</p>
+<!--                <div class='infobulle-content'><div class='infobulle-base'>?<span class=infobulle-pop>Info</span></div></p>-->
                 <div class="btn-group poi-list-modes" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-info active"><i class="fas fa-walking fa-lg"></i></button>
+                        <button type="button" class="btn btn-success ${temp ? '' : 'active'}" ${temp ? 'onclick=\'tempToPopi(this)\'' : ''}><i class="fas fa-walking fa-lg"></i></button>
                         <button type="button" class="btn btn-success"><i class="fas fa-biking fa-lg"></i></button>
                         <button type="button" class="btn btn-success"><i class="fas fa-car fa-lg"></i></button>
                         <button type="button" class="btn btn-success"><i class="fas fa-subway fa-lg"></i></button>

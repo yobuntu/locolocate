@@ -15,7 +15,6 @@ let zors = {
         "properties": {
             fillColor: '#deca47',
             color: '#debd00',
-
         },
         "geometry": {
             "type": "Polygon",

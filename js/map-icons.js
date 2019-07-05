@@ -37,3 +37,10 @@ let barPoiIcon = L.icon({
     iconUrl: './fontawesome/svgs/solid/beer.svg',
     iconSize:     [15, 15], // size of the icon
 });
+
+let defaultIcon = L.AwesomeMarkers.icon({
+    markerColor: 'cadetblue',
+    prefix: 'fa',
+    extraClasses: 'fas',
+    icon: 'spa',
+});

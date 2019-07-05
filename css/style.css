@@ -40,7 +40,7 @@ body {
     padding: 10px 0;
 }
 
-#shareModal {
+#share-modal {
     text-align: center;
     flex-direction: column;
     margin-top: 100px!important;
@@ -170,7 +170,34 @@ body {
     right: 30px;
 }
 
+#new-map-modal {
+    margin-top: 150px;
+}
+
 #new-map img {
     max-width: 50%;
     max-height: 50%;
+}
+
+#use-cases {
+    display: flex;
+    justify-content: space-around;
+    margin: 60px 10px;
+}
+
+.use-case {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.use-case button {
+    width: 150px;
+    height: 150px;
+}
+
+.use-case img {
+    max-width: 100%;
+    max-height: 100%;
 }

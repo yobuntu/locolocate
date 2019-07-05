@@ -32,3 +32,8 @@ let monumentIcon =  L.AwesomeMarkers.icon({
     extraClasses: 'fas',
     icon: 'camera-retro' ,
 });
+
+let barPoiIcon = L.icon({
+    iconUrl: './fontawesome/svgs/solid/beer.svg',
+    iconSize:     [15, 15], // size of the icon
+});

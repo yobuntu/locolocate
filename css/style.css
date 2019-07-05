@@ -33,10 +33,31 @@ body {
 
 #criteria-list {
     left: 30px;
+    display: flex;
+    flex-direction: column;
 }
 #criteria-list button {
     padding: 10px 10px;
     box-shadow: 0 -3px 4px -4px #0a0a0a inset;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
 }
 
 #search {
@@ -64,6 +85,7 @@ body {
 
 .leaflet-popup-content {
     margin: 0;
+    min-width: 450px;
 }
 
 .poi-popup {
@@ -74,4 +96,30 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 15px;
+}
+
+.popi-popup {
+    height: 130px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+
+.popi-popup-options {
+    position: absolute;
+    right: 10px;
+    padding: 0!important;
+    width: 30px;
+    height: 30px;
+}
+
+#popi-delete {
+    top: 20px;
+}
+
+#popi-icon {
+    top: 60px;
 }

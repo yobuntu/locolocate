@@ -15,6 +15,7 @@ let popi1 = {
 
 let popi2 = {
     name: 'Grafton Street, Dublin, Irlande',
+    address: 'Grafton Street, Dublin, Irlande (pareil quoi)',
     lat: 53.342307,
     lng: -6.259752,
     icon: monumentIcon,
@@ -22,6 +23,7 @@ let popi2 = {
 
 let popi3 = {
     name: 'Temple Bar',
+    address: 'Dublin D02 N725, Irlande',
     lat: 53.344957,
     lng: -6.267473,
     icon: barIcon,
@@ -29,6 +31,7 @@ let popi3 = {
 
 let popi4 = {
     name: 'National Museum of Ireland - Archaeology',
+    address: 'Kildare St, Dublin 2, Irlande',
     lat: 53.340259,
     lng: -6.254917,
     icon: museumIcon,
@@ -36,6 +39,7 @@ let popi4 = {
 
 let popi5 = {
     name: 'Christ Church Cathedral',
+    address: 'Somewhere',
     lat: 53.343719,
     lng: -6.271034,
     icon: monumentIcon,
@@ -48,15 +52,18 @@ let popi5 = {
 });
 
 function createPopiPopup(popi) {
-    return `<div class='poi-popup'>
-                <h4>${popi.name}</h4>
-                <span>${popi.address}</span>
+    let faIcon = 'fa-' + popi.icon.options.icon;
+    return `<div class='popi-popup'>
+                <h5>${popi.name}</h5>
+                <p>${popi.address}</p>
                 <div class="btn-group poi-list-modes" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-info active" onclick='switchToPopi()'><i class="fas fa-walking fa-lg"></i></button>
-                        <button type="button" class="btn btn-info" onclick='switchToPopi()'><i class="fas fa-biking fa-lg"></i></button>
-                        <button type="button" class="btn btn-info" onclick='switchToPopi()'><i class="fas fa-car fa-lg"></i></button>
-                        <button type="button" class="btn btn-info" onclick='switchToPopi()'><i class="fas fa-subway fa-lg"></i></button>
-                        <button type="button" class="btn btn-info" onclick='switchToPopi()'><i class="fas fa-code-branch fa-lg"></i></button>
+                        <button type="button" class="btn btn-info active"><i class="fas fa-walking fa-lg"></i></button>
+                        <button type="button" class="btn btn-success"><i class="fas fa-biking fa-lg"></i></button>
+                        <button type="button" class="btn btn-success"><i class="fas fa-car fa-lg"></i></button>
+                        <button type="button" class="btn btn-success"><i class="fas fa-subway fa-lg"></i></button>
+                        <button type="button" class="btn btn-success"><i class="fas fa-code-branch fa-lg"></i></button>
                 </div>
+                <button type="button" class="btn btn-secondary popi-popup-options" id="popi-delete"><i class="fas fa-trash-alt fa-sm"></i></button>
+                <button type="button" class="btn btn-info popi-popup-options" id="popi-icon"><i class="fas ${faIcon} fa-sm"></i></button>
         </div>`;
 }

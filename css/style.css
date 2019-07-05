@@ -37,8 +37,47 @@ body {
     flex-direction: column;
 }
 #criteria-list button {
-    padding: 10px 10px;
+    padding: 10px 0;
     box-shadow: 0 -3px 4px -4px #0a0a0a inset;
+}
+
+#shareModal {
+    text-align: center;
+    flex-direction: column;
+    margin-top: 100px!important;
+}
+
+#share-connect {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#share-connect button {
+    margin: 10px;
+}
+#share-connect i {
+    margin-top: 10px;
+}
+
+#list-social-medias {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#list-social-medias i {
+    padding: 2px 4px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+#share-url {
+    padding-right: 20px;
+    background-image: url('../fontawesome/svgs/solid/copy.svg');
+    background-position: calc(100% - 10px) 7px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
 }
 
 .btn-circle {
@@ -126,51 +165,4 @@ body {
 
 #popi-icon {
     top: 60px;
-}
-
-.infobulle-content {
-    width: 0px;
-    height: 20px;
-    margin: 3px;
-}
-
-.infobulle-base {
-    padding: 0;
-    margin: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 1px groove #026;
-    background-color: rgba(80, 90, 200);
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.infobulle-base:hover, .infobulle-base:focus {
-    background: rgba(50, 60, 150);
-    box-shadow:0 1px 0 rgba(255,255,255,.4);
-}
-.infobulle-pop {
-    position:absolute;
-    margin-top:23px;
-    margin-left:-65px;
-    color: rgb(230,100,54);
-    background:rgba(0,0,0,.9);
-    padding:15px;
-    border-radius:3px;
-    box-shadow:0 0 2px rgba(0,0,0,.5);
-    width: 0px;
-    transition:all .35s;
-    opacity:0;
-    font-size: 0px;
-    z-index: -1;
-}
-
-.infobulle-base:hover span, .infobulle-base:focus span {
-    opacity:1;
-    width: 250px;
-    font-size: 12px;
-    z-index: 201;
 }

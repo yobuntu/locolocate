@@ -38,7 +38,6 @@ body {
 }
 #criteria-list button {
     padding: 10px 0;
-    box-shadow: 0 -3px 4px -4px #0a0a0a inset;
 }
 
 #shareModal {
@@ -84,19 +83,17 @@ body {
     width: 30px;
     height: 30px;
     text-align: center;
-    padding: 6px 0;
     font-size: 12px;
     line-height: 1.428571429;
     border-radius: 15px;
+    box-shadow: 0 -3px 4px -4px #0a0a0a inset;
 }
 .btn-circle.btn-lg {
     width: 50px;
     height: 50px;
     margin: 2px;
-    padding: 10px 16px;
-    font-size: 18px;
-    line-height: 1.33;
     border-radius: 25px;
+    padding: 0!important;
 }
 
 #search {
@@ -165,4 +162,15 @@ body {
 
 #popi-icon {
     top: 60px;
+}
+
+#new-map {
+    position: fixed;
+    top: 70px;
+    right: 30px;
+}
+
+#new-map img {
+    max-width: 50%;
+    max-height: 50%;
 }

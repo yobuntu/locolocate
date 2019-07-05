@@ -3,7 +3,8 @@ let zors = {
     "features": [{
         "type": "Feature",
         "properties": {
-            color: '#75E02B',
+            fillColor: '#86de47',
+            color: '#5cde00',
         },
         "geometry": {
             "type": "Polygon",
@@ -12,7 +13,9 @@ let zors = {
     }, {
         "type": "Feature",
         "properties": {
-            "color": "#EBD22D",
+            fillColor: '#deca47',
+            color: '#debd00',
+
         },
         "geometry": {
             "type": "Polygon",
@@ -21,7 +24,8 @@ let zors = {
     }, {
         "type": "Feature",
         "properties": {
-            color: '#EBD22D'
+            fillColor: '#deca47',
+            color: '#debd00',
         },
         "geometry": {
             "type": "Polygon",
@@ -30,7 +34,8 @@ let zors = {
     }, {
         "type": "Feature",
         "properties": {
-            color: '#DE7A47'
+            fillColor: '#DE7A47',
+            color: '#de4a00',
         },
         "geometry": {
             "type": "Polygon",
@@ -45,5 +50,5 @@ let zor = L.geoJson(zors, {
 zor.bringToBack();
 
 function onZorFeature(feature, layer) {
-        layer.setStyle(Object.assign({fillOpacity: 0.7}, feature.properties));
+        layer.setStyle(Object.assign({fillOpacity: 0.4, weight: 1, strokeOpacity: 1}, feature.properties));
 }

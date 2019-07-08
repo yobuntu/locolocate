@@ -9,14 +9,14 @@ function switchToPopi() {
     };
 
     marker = L.marker([popi.lat, popi.lng], {icon: popi.icon})
-        .bindPopup(createPopiPopup(popi, 'MAP'))
-        .addTo(map);
+        .bindPopup(createPopiPopup(popi))
+        .addTo(allLayers);
     marker.openPopup();
     setTimeout(() => {
         map.removeLayer(zor);
         zor = L.geoJson(newZorGeojson, {
             onEachFeature: onZorFeature,
-        }).addTo(map);
+        }).addTo(allLayers);
         zor.bringToBack();
     }, 1500)
 }

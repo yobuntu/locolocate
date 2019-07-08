@@ -1,9 +1,12 @@
 let map = L.map('map-id', {zoomControl: false}).setView([53.351291, -6.267428], 14);
 
-L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-    maxZoom: 20,
-    attribution: '&copy; Openstreetmap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
 }).addTo(map);
+
+let allLayers = L.layerGroup().addTo(map);
 
 // Add default points on Dublin
 let popi1 = {
@@ -49,7 +52,7 @@ let popi5 = {
 [popi1, popi2, popi3, popi4, popi5].forEach(function (popi) {
     L.marker([popi.lat, popi.lng], {icon: popi.icon})
         .bindPopup(createPopiPopup(popi))
-        .addTo(map);
+        .addTo(allLayers);
 });
 
 function createPopiPopup(popi, temp) {

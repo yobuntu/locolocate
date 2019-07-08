@@ -44,3 +44,10 @@ let defaultIcon = L.AwesomeMarkers.icon({
     extraClasses: 'fas',
     icon: 'spa',
 });
+
+let workplaceIcon = L.AwesomeMarkers.icon({
+    markerColor: 'darkred',
+    prefix: 'fa',
+    extraClasses: 'fas',
+    icon: 'industry',
+});

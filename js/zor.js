@@ -45,9 +45,9 @@ let zors = {
 
 let zor = L.geoJson(zors, {
     onEachFeature: onZorFeature
-}).addTo(map);
+}).addTo(allLayers);
 zor.bringToBack();
 
 function onZorFeature(feature, layer) {
-        layer.setStyle(Object.assign({fillOpacity: 0.4, weight: 1, strokeOpacity: 1}, feature.properties));
+        layer.setStyle(Object.assign({fillOpacity: 0.2, weight: 1, strokeOpacity: 1}, feature.properties));
 }

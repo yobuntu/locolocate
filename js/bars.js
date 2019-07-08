@@ -403,7 +403,7 @@ let bars = {
 let bars_button = document.getElementById('bars-button');
 bars_button.addEventListener('click', (e) => {
     if (!barsDisplayed) {
-        barsLayer.addTo(map);
+        barsLayer.addTo(allLayers);
         bars_button.classList.add('active');
     }
     else {

@@ -51,3 +51,8 @@ let workplaceIcon = L.AwesomeMarkers.icon({
     extraClasses: 'fas',
     icon: 'industry',
 });
+
+let schoolPoiIcon = L.icon({
+    iconUrl: './fontawesome/svgs/solid/school.svg',
+    iconSize:     [15, 15], // size of the icon
+});

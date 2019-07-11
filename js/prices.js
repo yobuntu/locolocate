@@ -5,6 +5,7 @@ price_json = {
             "type": "Feature",
             "properties": {
                 "color": "#949FA8",
+                price: 15.3
             },
             "geometry": {
                 "type": "Polygon",
@@ -38,6 +39,7 @@ price_json = {
             "type": "Feature",
             "properties": {
                 "color": "#5C6269",
+                price: 17.7,
             },
             "geometry": {
                 "type": "Polygon",
@@ -71,6 +73,7 @@ price_json = {
             "type": "Feature",
             "properties": {
                 "color": "#3A3E42",
+                price: 18.3
             },
             "geometry": {
                 "type": "Polygon",
@@ -108,6 +111,7 @@ price_json = {
             "type": "Feature",
             "properties": {
                 "color": "#949FA8",
+                price: 16.3
             },
             "geometry": {
                 "type": "Polygon",
@@ -169,6 +173,7 @@ price_json = {
             "type": "Feature",
             "properties": {
                 "color": "#949494",
+                price: 15.8,
             },
             "geometry": {
                 "type": "Polygon",
@@ -226,6 +231,7 @@ price_json = {
             "type": "Feature",
             "properties": {
                 "color": "#51565C",
+                price: 20.2,
             },
             "geometry": {
                 "type": "Polygon",
@@ -259,6 +265,7 @@ price_json = {
             "type": "Feature",
             "properties": {
                 "color": "#5C6269",
+                price: 19.3
             },
             "geometry": {
                 "type": "Polygon",
@@ -292,6 +299,7 @@ price_json = {
             "type": "Feature",
             "properties": {
                 "color": "#949FA8",
+                price: 15.9
             },
             "geometry": {
                 "type": "Polygon",
@@ -329,6 +337,7 @@ price_json = {
             "type": "Feature",
             "properties": {
                 "color": "#51565C",
+                price: 14.8
             },
             "geometry": {
                 "type": "Polygon",
@@ -366,6 +375,7 @@ price_json = {
             "type": "Feature",
             "properties": {
                 "color": "#949FA8",
+                price: 16.8
             },
             "geometry": {
                 "type": "Polygon",
@@ -399,6 +409,7 @@ price_json = {
             "type": "Feature",
             "properties": {
                 "color": "#51565C",
+                price: 12.2,
             },
             "geometry": {
                 "type": "Polygon",
@@ -449,4 +460,5 @@ let pricesLayer = L.geoJson(price_json, {
 
 function onPriceFeature(feature, layer) {
     layer.setStyle(Object.assign({ stroke: 10, fillOpacity: 0.1, strokeOpacity: 0.8}, feature.properties))
+    layer.bindTooltip('Price : ' + feature.properties.price + '00 €/m<sup>2</sup>');
 }
